@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Earning Blueprint</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+    }
+
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      position: fixed;
+      background: #020617;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      color: #38bdf8;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 15px 0;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .main {
+      margin-left: 240px;
+      padding: 30px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>Blueprint</h2>
+  <a onclick="showSection('home')">🏠 Home</a>
+  <a onclick="showSection('roadmap')">📅 Roadmap</a>
+  <a onclick="showSection('methods')">💰 Methods</a>
+  <a onclick="showSection('templates')">📩 Templates</a>
+</div>
+
+<div class="main">
+
+  <div id="home">
+    <h1>🚀 Student Earning Blueprint</h1>
+    <p>From ₹0 → ₹10K as a student</p>
+
+    <div class="card">
+      <h2>Start Here</h2>
+      <button onclick="alert('Step 1: Choose a skill (writing/design)')">
+        Start Now
+      </button>
+    </div>
+  </div>
+
+  <div id="roadmap" style="display:none;">
+    <h1>📅 Roadmap</h1>
+    <div class="card">Day 1–3: Choose skill</div>
+    <div class="card">Day 4–7: Learn basics</div>
+    <div class="card">Day 8–14: Get client</div>
+  </div>
+
+  <div id="methods" style="display:none;">
+    <h1>💰 Methods</h1>
+    <div class="card">Freelancing</div>
+    <div class="card">Content writing</div>
+    <div class="card">Design services</div>
+  </div>
+
+  <div id="templates" style="display:none;">
+    <h1>📩 Templates</h1>
+    <div class="card">
+      Hi, I saw your page. I can help improve your content.
+    </div>
+  </div>
+
+</div>
+
+<script>
+function showSection(section) {
+  document.getElementById("home").style.display = "none";
+  document.getElementById("roadmap").style.display = "none";
+  document.getElementById("methods").style.display = "none";
+  document.getElementById("templates").style.display = "none";
+
+  document.getElementById(section).style.display = "block";
+}
+</script>
+
+</body>
+</html>
